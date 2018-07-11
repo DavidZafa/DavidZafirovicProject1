@@ -16,48 +16,56 @@ var quiz =
               "Which player starred in Space Jam?",
               "Which player played more regular season games?"]
 
-function runGame (){
+
 
 var rand = quiz[Math.floor(Math.random() * quiz.length)];
+
+
 buttonStart.addEventListener('click', function(event) {
   document.getElementById('questiontime').innerText= rand;
 })
-
+buttonNext.addEventListener('click', function(event) {
+  document.getElementById('questiontime').innerText = rand;
+})
 
 buttonMJ.addEventListener('click', function(event) {
   if(rand = quiz[0], quiz[1], quiz[5]){
-score = score + 1
+
 alert("correct" + " " + score)
 
-
+  }
+  else {
+    return false
   }
 
 })
 
 buttonBron.addEventListener('click', function(event) {
   if(rand = quiz[4], quiz[6], quiz[7]){
-score = score + 1
+
 alert ("correct" + " " + score)
 
+  }
+  else {
+    return false
   }
 
 })
 
 buttonKobe.addEventListener('click', function(event) {
   if(rand = quiz[2], quiz[3]){
-score = score + 1
 alert("correct" + " " + score)
 
   }
-
-})
-
-buttonNext.addEventListener('click', function(event) {
-  document.getElementById('questiontime').innerText = rand;
-})
-
+else {
+  return false
 }
-return runGame()
+})
+
+
+
+
+
 
 
 // let score = 0
