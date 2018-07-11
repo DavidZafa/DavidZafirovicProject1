@@ -61,10 +61,22 @@ transform: translate(-50%, -50%);
 position: absolute;
 }
 
+h4 {
+  text-align: right;
+  color: white;
+  font-size: 30px;
+}
+
 body{
   background-image: url("https://i.pinimg.com/originals/6b/45/0b/6b450bef4b98d7c48e25eb67893c3fee.jpg");
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
   height: 100%;
+}
+
+#questiontime {
+  text-align: center;
+  font-size: 30px;
+  color: white;
 }
