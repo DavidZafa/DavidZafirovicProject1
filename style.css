@@ -1,0 +1,70 @@
+h1{
+  text-align: center;
+  color: white;
+}
+
+p{
+  color: white;
+  text-align: center;
+}
+.start {
+
+    color: white;
+    padding: 10px;
+    margin: 10px 10px 10px 10px;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    width: 18%;
+    margin-left: 41%;
+    margin-right: 41%;
+    background-image: url("https://media.gettyimages.com/xc/175534263-basketball-texture.jpg?v=1&c=IWSAsset&k=2&d=BF73B9D673DE700BCC719A313759AD321B86E9F100254758E6EDC5F7FDDCC5D6&b=RQ==");
+    background-position: center;
+
+}
+
+h3 {
+border: 1px solid black;
+display: inline;
+border-bottom:
+}
+
+.ballers {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 100px;
+
+
+}
+.mj, .bron, .kobe {
+  padding: 0;
+border: none;
+background: none;
+}
+
+.image{
+  padding: 10px;
+  position: relative;
+
+   }
+
+h2{
+  color: white;
+padding-bottom: 60px;
+top: 50%;
+font-size: 20px;
+left: 50%;
+font-family: Helvetica, serif;
+transform: translate(-50%, -50%);
+position: absolute;
+}
+
+body{
+  background-image: url("https://i.pinimg.com/originals/6b/45/0b/6b450bef4b98d7c48e25eb67893c3fee.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  height: 100%;
+}
