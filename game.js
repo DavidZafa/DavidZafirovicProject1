@@ -52,7 +52,7 @@ var Mike = document.getElementById('MJ')
 var Bron = document.getElementById('Bron')
 var Kobe = document.getElementById('Kobe')
 var Next = document.getElementById('question')
-var x = document.getElementById("myAudio")
+
 
 
 var giveQuestion = function(){
@@ -93,7 +93,19 @@ var unchecked = function() {
         }
     }
 };
-
+function addReset(){
+    var reset = document.createElement("button");
+    reset.innerHTML = "reset quiz";
+    quizbox.appendChild(reset);
+    reset.addEventListener("click", function(){
+        current=0;
+        holder=0;
+        score=0;
+        giveQuestion();
+        choices.style.display = "flex";
+        quizbox.removeChild(reset);
+    })
+}
 
 var quizOver = function(){
     if(current === quiz.length-1){
@@ -106,12 +118,11 @@ var quizOver = function(){
     }
 };
 
-
 next.addEventListener("click", function(){
     getChecked()
     quizOver()
     unchecked()
-
-})
+    addReset()
+}, false)
 
 }

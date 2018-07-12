@@ -31,18 +31,13 @@ p{
 justify-content: center;
 flex-direction: row;
 padding: 10px;
-border: 1px solid white;
-border-width: thick;
 margin-left: 0 auto;
 
 
 }
 
 body{
-  background-image: url("https://navajotimes.com/wordpress/wp-content/uploads/2017/05/bball-basketball.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+background-color: maroon;
   height: 100%;
 }
 
