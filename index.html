@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Gaegu|Knewave" rel="stylesheet">
+
     <meta charset="utf-8">
 
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -8,48 +10,28 @@
   <script type="text/javascript" src="game.js"></script>
     <h1>Welcome To The Best(?) Basketball Trivia Game You'll Ever Play!</h1>
   </head>
+<body>
 <p>
 Ready to put your knowledge of the league's 3 greats to the test?
 </p>
-<button class="start">Ready?</button>
-<div id="questiontime">
 
-</div>
+ <input type="button" id="start" value="Start"></input>
+<div id="question"></div><br / />
 
-<div class="score">0</div>
 <div class="high">
   <h3>High Scores!<h3>
 </div>
-<div class= "next">
-  <button>Next</button>
-</div>
+ <input type="button" id="next" value="Next"></input>
 <div class="ballers">
 <form id = "choices">
-<div class="image">
-  <input type="radio" class="options" value="0"><label id="MJ"></label></input><br />
-         <input type="radio" class="options" value="1"><label id="Bron"></label></input><br />
-         <input type="radio" class="options" value="2"><label id="Kobe"></label></input><br />
-<!-- <input type="radio" value = "0"class="mj"><img src="https://resizing.flixster.com/pzZiETQS7NUamJa8IcSbBnZqe-w=/300x300/v1.cjs0MjUyMDtqOzE3NzMwOzEyMDA7MjIzOzI1MA" alt="Michael"></button>
-  <h2>Michael Jordan</h2>
-</div>
-<div class="image">
-  <input type="radio" value = "1" class="bron"><img src="http://saharareporterssport.com/wp-content/uploads/2016/06/lebronjames-300x300.jpg" alt = "Lebron"></button>
-  <h2>Lebron James</h2>
-</div>
-<div class="image">
-<input type="radio" value = "2" class="kobe"> <img src="http://endlessfacts.com/upload/img/IClAo14400597932.jpg" alt = "Kobe"> </button>
-  <h2>Kobe Bryant</h2>
-</div> -->
+<img src="https://resizing.flixster.com/pzZiETQS7NUamJa8IcSbBnZqe-w=/300x300/v1.cjs0MjUyMDtqOzE3NzMwOzEyMDA7MjIzOzI1MA" class = "image"/>
+<img src="http://endlessfacts.com/upload/img/IClAo14400597932.jpg"class = "image" />
+<img src="http://saharareporterssport.com/wp-content/uploads/2016/06/lebronjames-300x300.jpg" class = "image"/>
+  <input type="radio" class="options" value="0"><label id="MJ"></label> </input><br />
+ <input type="radio" class="options" value="1"><label id="Bron"> </label></input><br />
+   <input type="radio" class="options" value="2"><label id="Kobe"> </label></input><br />
+
 </form>
 </div>
-<!-- https://resizing.flixster.com/pzZiETQS7NUamJa8IcSbBnZqe-w=/300x300/v1.cjs0MjUyMDtqOzE3NzMwOzEyMDA7MjIzOzI1MA
-http://saharareporterssport.com/wp-content/uploads/2016/06/lebronjames-300x300.jpg
-http://endlessfacts.com/upload/img/IClAo14400597932.jpg -->
-
-<div class= "next">
-  <button>Next</button>
-</div>
-  <body>
-
   </body>
 </html>

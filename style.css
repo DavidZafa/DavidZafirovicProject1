@@ -1,13 +1,15 @@
 h1{
   text-align: center;
   color: white;
+  font-family: 'Gaegu', cursive;
 }
 
 p{
   color: white;
   text-align: center;
+  font-family: 'Gaegu', cursive;
 }
-.start {
+#start {
 
     color: white;
     padding: 10px;
@@ -44,11 +46,6 @@ border: none;
 background: none;
 }
 
-.image{
-  padding: 10px;
-  position: relative;
-
-   }
 
 h2{
   color: white;
@@ -65,6 +62,7 @@ h4 {
   text-align: right;
   color: white;
   font-size: 30px;
+  font-family: 'Knewave', cursive;
 }
 
 body{
@@ -75,8 +73,32 @@ body{
   height: 100%;
 }
 
-#questiontime {
+#question {
   text-align: center;
   font-size: 50px;
   color: white;
+  font-family: 'Gaegu', cursive;
+}
+
+#next {
+  color: white;
+  padding: 10px;
+  margin: 10px 10px 10px 10px;
+  text-align: center;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  width: 18%;
+  margin-left: 41%;
+  margin-right: 41%;
+  background-image: url("https://media.gettyimages.com/xc/175534263-basketball-texture.jpg?v=1&c=IWSAsset&k=2&d=BF73B9D673DE700BCC719A313759AD321B86E9F100254758E6EDC5F7FDDCC5D6&b=RQ==");
+  background-position: center;
+}
+
+#choices {
+  text-align: center;
+  color: Red;
+  font-family: 'Gaegu', cursive;
+  display: inline;
+
 }

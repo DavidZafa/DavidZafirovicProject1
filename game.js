@@ -1,139 +1,115 @@
 window.onload = function(){
-const buttonStart = document.querySelector('.start')
-const buttonMJ = document.querySelector('.mj')
-const buttonBron = document.querySelector('.bron')
-const buttonKobe = document.querySelector('.kobe')
-const buttonNext = document.querySelector('.next')
-
-mj0
-bron1
-kobe2
 
 
-var quizz = [{
+
+
+
+var quiz = [{
   question: "Which player has more scoring titles?",
   choices: ["Michael Jordan", "Kobe Bryant", "Lebron James"],
   answer : 0
 },
   {
     question: "Which player averaged more PPG in the Playoffs?",
-    choices: [buttonMJ, buttonBron, buttonKobe],
+    choices: ["Michael Jordan", "Kobe Bryant", "Lebron James"],
     answer : 0
   },
   {
     question: "Which player made more All-NBA First Teams?",
-    choices: [buttonMJ, buttonBron, buttonKobe],
+    choices: ["Michael Jordan", "Kobe Bryant", "Lebron James"],
     answer : 2
   },
   {
     question: "Which player played in more All-Star Games?",
-    choices: [buttonMJ, buttonBron, buttonKobe],
-    answer : 2
-  },
-  {
-    question: "Which player averaged more assists per game?",
-    choices: [buttonMJ, buttonBron, buttonKobe],
+    choices: ["Michael Jordan", "Kobe Bryant", "Lebron James"],
     answer : 1
   },
   {
-    question: "Which player never played with Shaquille O' Neil?",
-    choices: [buttonMJ, buttonBron, buttonKobe],
+    question: "Which player averaged more assists per game?",
+    choices: ["Michael Jordan", "Kobe Bryant", "Lebron James"],
     answer : 2
   },
+  {
+    question: "Which player never played with Shaquille O' Neil?",
+    choices: ["Michael Jordan", "Kobe Bryant", "Lebron James"],
+    answer : 0
+  },
+  {
   question: "Which player starred in Space Jam?",
-  choices: [buttonMJ, buttonBron, buttonKobe],
+  choices: ["Michael Jordan", "Kobe Bryant", "Lebron James"],
   answer : 0
 },
+{
 question: "Which player played more regular season games?",
-choices: [buttonMJ, buttonBron, buttonKobe],
-answer : 2
+choices: ["Michael Jordan", "Kobe Bryant", "Lebron James"],
+answer : 1
 }]
-// var quiz =
-//              ["Which player has more scoring titles?",
-//               "Which player averaged more PPG in the Playoffs?",
-//               "Which player made more All-NBA First Teams?",
-//               "Which player played in more All-Star Games?",
-//               "Which player averaged more assists per game?",
-//               "Which player never played with Shaquille O' Neil?",
-//               "Which player starred in Space Jam?",
-//               "Which player played more regular season games?"]
-//
-// var MJ = {firstq: quiz[0], secondq:quiz[1], thirdq: quiz[5]}
-// var LBJ = {fourthq: quiz[4], fifthq: quiz[6], sixthq: quiz[7]}
-// var KB = {seventhq: quiz[2], eigthq: quiz[3]}
-//
-//
-//
-// function askQuestion () {
-//
-// var rand = quiz[Math.floor(Math.random() * quiz.length)]
-//
-// buttonStart.addEventListener('click', function(event) {
-//   document.getElementById('questiontime').innerText = rand
-// })
-//
-// buttonNext.addEventListener('click', function(event) {
-//   document.getElementById('questiontime').innerText = rand
-// })
-//
-// }
-// askQuestion()
-// // if (rand = quiz[0], quiz[1], quiz[5]){
-// //   buttonMJ.addEventListener('click', function(event){
-// //
-// //   })
-// // }
-//
-//
-// buttonMJ.addEventListener('click', function(event) {
-//   if(rand = quiz[0], quiz[1], quiz[5]){
-// }
-// })
-//
-// buttonBron.addEventListener('click', function(event) {
-//   if(rand = quiz[4], quiz[6], quiz[7]){
-// }
-// })
-//
-// buttonKobe.addEventListener('click', function(event) {
-//   if(rand = quiz[2], quiz[3]){
-//   }
-// })
-//
+
+var current = 0
+var score = 0
+var holder = 0
+
+var Start = document.getElementById('question')
+var Mike = document.getElementById('MJ')
+var Bron = document.getElementById('Bron')
+var Kobe = document.getElementById('Kobe')
+var Next = document.getElementById('next')
 
 
-
-
-
-
-// let score = 0
-// let ballEl = document.querySelector('.js-ball')
-//
-// let scoreEl = document.querySelector('.js-score')
-//
-//
-// ballEl.addEventListener('click', () => {
-//   score += 10
-//
-//   if (score <= 100) {
-//     scoreEl.innerHTML = score
-//   } else {
-//     declareWinner()
-//   }
-//
-//   function declareWinner () {
-//     alert("Winner!")
-//   }
-//  })
-
-
-// MJ
-// MJ
-// KOBE
-// KOBE
-// BRON
-// MJ
-// BRON
-// BRON
+var giveQuestion = function(){
+  Start.innerHTML=quiz[current].question;
+  Mike.innerHTML=quiz[current].choices[0];
+  Bron.innerHTML=quiz[current].choices[1];
+  Kobe.innerHTML=quiz[current].choices[2];
 
 }
+
+giveQuestion()
+var clickedAnswer = null
+var answers = document.getElementsByClassName("options")
+
+
+
+var getChecked = function() {
+  for(var i = 0; i < answers.length; i++){
+    if(answers[i].checked){
+      clickedAnswer = answers[i].value
+      }
+  }
+  if(clickedAnswer==quiz[current].answer){
+    score++
+    holder=1
+  }
+  else{
+    holder = 0
+  }
+}
+
+var unchecked = function() {
+    var inputs = document.getElementsByTagName("input");
+    for(var i = inputs.length-1;i>=0;i--){
+    if(inputs[i].getAttribute("type")==="radio"){
+        inputs[i].checked=false;
+        }
+    }
+};
+
+
+var quizOver = function(){
+    if(current === quiz.length-1){
+        question.innerHTML="Your score is " + score;
+
+
+    }
+    else{
+        current++;
+        giveQuestion();
+    }
+};
+
+
+next.addEventListener("click", function(){
+    getChecked();
+    quizOver();
+    unchecked();
+}, false);
