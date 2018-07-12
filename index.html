@@ -2,36 +2,50 @@
 <html lang="en" dir="ltr">
   <head>
     <link href="https://fonts.googleapis.com/css?family=Gaegu|Knewave" rel="stylesheet">
-
-    <meta charset="utf-8">
-
+<meta charset="utf-8">
+<script type="text/javascript" src="game.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+
+
     <title>Basketball Trivia</title>
-  <script type="text/javascript" src="game.js"></script>
+
     <h1>Welcome To The Best(?) Basketball Trivia Game You'll Ever Play!</h1>
   </head>
+
+
 <body>
+<audio id = "myAudio">
+  <source src ="BOOM2.mp3" type="audio/mpeg">
+</audio>
+
+
 <p>
 Ready to put your knowledge of the league's 3 greats to the test?
 </p>
 
- <input type="button" id="start" value="Start"></input>
 <div id="question"></div><br / />
 
-<div class="high">
+<!-- <div class="high">
   <h3>High Scores!<h3>
-</div>
- <input type="button" id="next" value="Next"></input>
+</div> -->
+ <!-- <input type="button" id="next" value="Next"></input> -->
 <div class="ballers">
-<form id = "choices">
-<img src="https://resizing.flixster.com/pzZiETQS7NUamJa8IcSbBnZqe-w=/300x300/v1.cjs0MjUyMDtqOzE3NzMwOzEyMDA7MjIzOzI1MA" class = "image"/>
-<img src="http://endlessfacts.com/upload/img/IClAo14400597932.jpg"class = "image" />
-<img src="http://saharareporterssport.com/wp-content/uploads/2016/06/lebronjames-300x300.jpg" class = "image"/>
-  <input type="radio" class="options" value="0"><label id="MJ"></label> </input><br />
- <input type="radio" class="options" value="1"><label id="Bron"> </label></input><br />
-   <input type="radio" class="options" value="2"><label id="Kobe"> </label></input><br />
-
-</form>
+  <img src="https://resizing.flixster.com/pzZiETQS7NUamJa8IcSbBnZqe-w=/300x300/v1.cjs0MjUyMDtqOzE3NzMwOzEyMDA7MjIzOzI1MA"/>
+  <img src="http://endlessfacts.com/upload/img/IClAo14400597932.jpg" />
+  <img src="http://saharareporterssport.com/wp-content/uploads/2016/06/lebronjames-300x300.jpg" />
 </div>
+<form id = "choices">
+
+  <input type="radio" button onclick="playAudio()" class="options" value="0" name = "yes"><label id="MJ"> </label> </input><br />
+ <input type="radio" button onclick="playAudio()" class="options" value="1" name = "yes"><label id="Bron"> </label></input><br />
+    <input type="radio" button onclick="playAudio()" class="options" value="2" name = "yes"><label id="Kobe"> </label></input><br />
+</form>
+ <input type="button" button onclick="playAudio()" button id="next" value="Next"></input>
+<script>
+var x = document.getElementById("myAudio")
+
+function playAudio() {
+    x.play()
+}</script>
   </body>
 </html>

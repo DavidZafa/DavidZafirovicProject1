@@ -2,8 +2,6 @@ window.onload = function(){
 
 
 
-
-
 var quiz = [{
   question: "Which player has more scoring titles?",
   choices: ["Michael Jordan", "Kobe Bryant", "Lebron James"],
@@ -49,26 +47,27 @@ var current = 0
 var score = 0
 var holder = 0
 
-var Start = document.getElementById('question')
+
 var Mike = document.getElementById('MJ')
 var Bron = document.getElementById('Bron')
 var Kobe = document.getElementById('Kobe')
-var Next = document.getElementById('next')
+var Next = document.getElementById('question')
+var x = document.getElementById("myAudio")
 
 
 var giveQuestion = function(){
-  Start.innerHTML=quiz[current].question;
-  Mike.innerHTML=quiz[current].choices[0];
-  Bron.innerHTML=quiz[current].choices[1];
-  Kobe.innerHTML=quiz[current].choices[2];
+  Next.innerHTML=quiz[current].question
+  Mike.innerHTML=quiz[current].choices[0]
+  Bron.innerHTML=quiz[current].choices[1]
+  Kobe.innerHTML=quiz[current].choices[2]
+
 
 }
+
 
 giveQuestion()
 var clickedAnswer = null
 var answers = document.getElementsByClassName("options")
-
-
 
 var getChecked = function() {
   for(var i = 0; i < answers.length; i++){
@@ -79,6 +78,7 @@ var getChecked = function() {
   if(clickedAnswer==quiz[current].answer){
     score++
     holder=1
+
   }
   else{
     holder = 0
@@ -89,7 +89,7 @@ var unchecked = function() {
     var inputs = document.getElementsByTagName("input");
     for(var i = inputs.length-1;i>=0;i--){
     if(inputs[i].getAttribute("type")==="radio"){
-        inputs[i].checked=false;
+        inputs[i].checked=false
         }
     }
 };
@@ -97,19 +97,21 @@ var unchecked = function() {
 
 var quizOver = function(){
     if(current === quiz.length-1){
-        question.innerHTML="Your score is " + score;
-
+        question.innerHTML="Your score is " + score
 
     }
     else{
-        current++;
-        giveQuestion();
+        current++
+        giveQuestion()
     }
 };
 
 
 next.addEventListener("click", function(){
-    getChecked();
-    quizOver();
-    unchecked();
-}, false);
+    getChecked()
+    quizOver()
+    unchecked()
+
+})
+
+}
