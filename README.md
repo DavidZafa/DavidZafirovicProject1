@@ -28,7 +28,7 @@ The code itself wasn't too difficult to implement. The hardest part was getting 
 };
 ```
 
-#Thoughts
+# Thoughts
 
 As far as working on the project goes, I went back to the drawing board a couple of times. For some ideas that I had, I realized I didn't have the time to teach myself some of the things I'd need to implement such ideas. Therefore, I stuck to what I know and delivered a solid, straightforward project.
 
