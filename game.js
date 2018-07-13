@@ -1,7 +1,7 @@
 window.onload = function(){
 
 
-
+//All the questions for the quiz
 var quiz = [{
   question: "Which player has more scoring titles?",
   choices: ["Michael Jordan", "Kobe Bryant", "Lebron James"],
@@ -45,7 +45,7 @@ answer : 1
 
 var current = 0
 var score = 0
-var holder = 0
+
 
 
 var Mike = document.getElementById('MJ')
@@ -64,10 +64,15 @@ var giveQuestion = function(){
 
 }
 
-
+//Function to display one question after the next
 giveQuestion()
 var clickedAnswer = null
 var answers = document.getElementsByClassName("options")
+
+
+
+//Get the value of the checked radio button
+//Check it it matches the correct answer
 
 var getChecked = function() {
   for(var i = 0; i < answers.length; i++){
@@ -77,14 +82,12 @@ var getChecked = function() {
   }
   if(clickedAnswer==quiz[current].answer){
     score++
-    holder=1
+
 
   }
-  else{
-    holder = 0
-  }
+
 }
-
+//Uncheck the radio button
 var unchecked = function() {
     var inputs = document.getElementsByTagName("input");
     for(var i = inputs.length-1;i>=0;i--){
@@ -93,20 +96,22 @@ var unchecked = function() {
         }
     }
 };
-function addReset(){
+
+//Funciton to add and implement a reset button
+
     var reset = document.createElement("button");
-    reset.innerHTML = "reset quiz";
-    quizbox.appendChild(reset);
+    reset.innerHTML = "Reset";
+    quizgame.appendChild(reset);
     reset.addEventListener("click", function(){
         current=0;
         holder=0;
         score=0;
-        giveQuestion();
+        giveQuestion()
         choices.style.display = "flex";
-        quizbox.removeChild(reset);
-    })
-}
+        })
 
+
+//End the quiz
 var quizOver = function(){
     if(current === quiz.length-1){
         question.innerHTML="Your score is " + score
@@ -117,12 +122,14 @@ var quizOver = function(){
         giveQuestion()
     }
 };
+//Makes the next button work
 
 next.addEventListener("click", function(){
+
     getChecked()
     quizOver()
     unchecked()
-    addReset()
+
 }, false)
 
 }
