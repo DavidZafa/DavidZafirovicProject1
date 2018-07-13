@@ -3,7 +3,7 @@
   <head>
     <link href="https://fonts.googleapis.com/css?family=Gaegu|Knewave" rel="stylesheet">
 <meta charset="utf-8">
-<script type="text/javascript" src="game.js"></script>
+<script src="game.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 
 
@@ -23,26 +23,30 @@
 Ready to put your knowledge of the league's 3 greats to the test?
 </p>
 
-<div id="question"></div><br / />
+<div id="question"></div><br />
 
-<!-- <div class="high">
-  <h3>High Scores!<h3>
-</div> -->
- <!-- <input type="button" id="next" value="Next"></input> -->
 <div id = "quizbox">
 
 <div class="ballers">
-  <img src="https://resizing.flixster.com/pzZiETQS7NUamJa8IcSbBnZqe-w=/300x300/v1.cjs0MjUyMDtqOzE3NzMwOzEyMDA7MjIzOzI1MA"/>
-  <img src="http://endlessfacts.com/upload/img/IClAo14400597932.jpg" />
-  <img src="http://saharareporterssport.com/wp-content/uploads/2016/06/lebronjames-300x300.jpg" />
+  <img src="https://resizing.flixster.com/pzZiETQS7NUamJa8IcSbBnZqe-w=/300x300/v1.cjs0MjUyMDtqOzE3NzMwOzEyMDA7MjIzOzI1MA" alt = "Mike"/>
+  <img src="http://endlessfacts.com/upload/img/IClAo14400597932.jpg" alt = "Bron"/>
+  <img src="http://saharareporterssport.com/wp-content/uploads/2016/06/lebronjames-300x300.jpg" alt = "Kobe" />
 </div>
 <form id = "choices">
 
-  <input type="radio"class="options" value="0" name = "yes"><label id="MJ"> </label> </input><br />
- <input type="radio" class="options" value="1" name = "yes"><label id="Bron"> </label></input><br />
-    <input type="radio"class="options" value="2" name = "yes"><label id="Kobe"> </label></input><br />
+  <input type="radio" class="options" value="0" name = "yes"><label id="MJ"> </label> <br />
+ <input type="radio" class="options" value="1" name = "yes"><label id="Bron"> </label><br />
+ <input type="radio" class="options" value="2" name = "yes"><label id="Kobe"> </label><br />
 </form>
- <input type="button" button onclick="playAudio()" button id="next" value="Next"></input>
+ <input type="button" button onclick="playAudio()" button id="next" value="Next">
 </div>
+<script>
+var x = document.getElementById("myAudio");
+
+function playAudio() {
+    x.play();
+}
+
+</script>
   </body>
 </html>
