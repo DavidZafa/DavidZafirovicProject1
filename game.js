@@ -56,11 +56,11 @@ var Next = document.getElementById('question')
 
 
 var giveQuestion = function(){
+
   Next.innerHTML=quiz[current].question
   Mike.innerHTML=quiz[current].choices[0]
   Bron.innerHTML=quiz[current].choices[1]
   Kobe.innerHTML=quiz[current].choices[2]
-
 
 }
 
@@ -74,13 +74,14 @@ var answers = document.getElementsByClassName("options")
 //Get the value of the checked radio button
 //Check it it matches the correct answer
 
+
 var getChecked = function() {
   for(var i = 0; i < answers.length; i++){
     if(answers[i].checked){
       clickedAnswer = answers[i].value
       }
   }
-  if(clickedAnswer==quiz[current].answer){
+  if(clickedAnswer==quiz[current].answer && score < 8){
     score++
 
 
@@ -99,17 +100,18 @@ var unchecked = function() {
 
 //Funciton to add and implement a reset button
 
-    var reset = document.createElement("button");
-    reset.innerHTML = "Reset";
-    quizgame.appendChild(reset);
+
+    var reset = document.createElement("button")
+    reset.innerHTML = "Reset"
+    quizgame.appendChild(reset)
     reset.addEventListener("click", function(){
         current=0;
         holder=0;
         score=0;
         giveQuestion()
         choices.style.display = "flex";
-        })
 
+        })
 
 //End the quiz
 var quizOver = function(){
@@ -122,14 +124,15 @@ var quizOver = function(){
         giveQuestion()
     }
 };
+
 //Makes the next button work
 
 next.addEventListener("click", function(){
-
     getChecked()
     quizOver()
     unchecked()
 
-}, false)
+
+})
 
 }
