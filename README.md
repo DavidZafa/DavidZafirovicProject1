@@ -25,8 +25,8 @@ The code itself wasn't too difficult to implement. The hardest part was getting 
         inputs[i].checked=false
         }
     }
-};```
-
+};
+```
 As far as working on the project goes, I went back to the drawing board a couple of times. For some ideas that I had, I realized I didn't have the time to teach myself some of the things I'd need to implement such ideas. Therefore, I stuck to what I know and delivered a solid, straightforward project.
 
 Goal setting was a big thing for me this project. My bronze goal was to get a working, score keeping trivia game. Silver goal was to add a reset button and some sound effects. Gold goal was high-score tracking and being able to change the pictures presented on the page, making them differ per question.
