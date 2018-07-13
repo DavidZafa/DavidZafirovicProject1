@@ -17,8 +17,8 @@ This project is a simple trivia game that tests your knowledge of 3 of the NBA's
 This project used HTML, Javascript, and CSS.
 
 The code itself wasn't too difficult to implement. The hardest part was getting the radio buttons to unclick, but I was able to do that like so:
-
-```var unchecked = function() {
+```
+var unchecked = function() {
     var inputs = document.getElementsByTagName("input");
     for(var i = inputs.length-1;i>=0;i--){
     if(inputs[i].getAttribute("type")==="radio"){
