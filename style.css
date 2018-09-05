@@ -34,13 +34,11 @@ padding: 10px;
 margin: 0 auto;
 
 
-
-
 }
 
-html{
-background: linear-gradient( #23074d,#cc5333);
-background-size: cover;
+body{
+background-color: maroon;
+  height: 100%;
 }
 
 #question {
@@ -61,8 +59,8 @@ background-size: cover;
   width: 18%;
   margin-left: 41%;
   margin-right: 41%;
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6IvGyn0GnmGScu9uDUTtF5wUB5PEnbkUv5ePceW-ub5NkZ7Ea");
-  background-position: center;
+  /* background-image: url("https://media.gettyimages.com/xc/175534263-basketball-texture.jpg?v=1&c=IWSAsset&k=2&d=BF73B9D673DE700BCC719A313759AD321B86E9F100254758E6EDC5F7FDDCC5D6&b=RQ==");
+  background-position: center; */
 }
 
 #choices {
@@ -73,6 +71,5 @@ background-size: cover;
   padding-left: 500px;
   flex-direction: row;
   margin: 20px 20px 20px 20px;
-
 
 }
