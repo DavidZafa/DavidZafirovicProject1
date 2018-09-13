@@ -123,7 +123,7 @@ var quizOver = function(){
         current++
         giveQuestion()
     }
-};
+}
 
 //Makes the next button work
 
