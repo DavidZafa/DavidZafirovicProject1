@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Gaegu|Knewave" rel="stylesheet">
-<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet"><meta charset="utf-8">
 <script src="game.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -14,9 +13,7 @@
 
 
 <body>
-<audio id = "myAudio">
-  <source src ="BOOM2.mp3" type="audio/mpeg">
-</audio>
+
 
 
 <p>
@@ -28,9 +25,9 @@ Ready to put your knowledge of the league's 3 greats to the test?
 <div id = "quizgame">
 
 <div class="ballers">
-  <img src="https://resizing.flixster.com/P_j7tvwC7XufsmPxPdLrzjoiRVs=/300x300/v1.cjs0MjUyMDtqOzE3Nzc1OzEyMDA7MjIzOzI1MA" alt = "Mike"/>
-  <img src="http://endlessfacts.com/upload/img/IClAo14400597932.jpg" alt = "Bron"/>
-  <img src="http://saharareporterssport.com/wp-content/uploads/2016/06/lebronjames-300x300.jpg" alt = "Kobe" />
+  <img class = "Lebron" src="https://render.fineartamerica.com/images/rendered/square-dynamic/small/images/artworkimages/mediumlarge/1/michael-jordan-suspended-in-air-brian-reaves.jpg" alt = "Mike"/>
+  <img class ="Bryant" src="http://endlessfacts.com/upload/img/IClAo14400597932.jpg" alt = "Bron"/>
+  <img class = "Jordan" src="http://saharareporterssport.com/wp-content/uploads/2016/06/lebronjames-300x300.jpg" alt = "Kobe" />
 </div>
 <form id = "choices">
 
@@ -38,13 +35,10 @@ Ready to put your knowledge of the league's 3 greats to the test?
  <input type="radio" class="options" value="1" name = "yes"><label id="Bron"> </label><br />
  <input type="radio" class="options" value="2" name = "yes"><label id="Kobe"> </label><br />
 </form>
- <input type="button" button onclick="playAudio()" button id="next" value="Next">
+ <input type="button" button id="next" value="Next">
 </div>
 <script>
-var x = document.getElementById("myAudio");
-function playAudio() {
-    x.play();
-}
+
 </script>
   </body>
 </html>

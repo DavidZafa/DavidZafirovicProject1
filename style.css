@@ -1,14 +1,12 @@
 h1{
   text-align: center;
   color: white;
-  font-family: 'Gaegu', cursive;
-}
+font-family: 'Merriweather Sans', sans-serif;}
 
 p{
   color: white;
   text-align: center;
-  font-family: 'Gaegu', cursive;
-}
+font-family: 'Merriweather Sans', sans-serif;}
 #start {
 
     color: white;
@@ -32,7 +30,22 @@ justify-content: center;
 flex-direction: row;
 padding: 10px;
 margin: 0 auto;
+}
 
+.Lebron {
+  filter: drop-shadow(16px 16px 10px black);
+  border: 1px solid white;
+}
+
+.Bryant {
+  filter: drop-shadow(16px 16px 10px black);
+  border: 1px solid white;
+
+}
+
+.Jordan {
+  filter: drop-shadow(16px 16px 10px black);
+  border: 1px solid white;
 
 }
 
@@ -45,11 +58,11 @@ background-color: maroon;
   text-align: center;
   font-size: 50px;
   color: white;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Merriweather Sans', sans-serif;
+
 }
 
 #next {
-  color: white;
   padding: 10px;
   margin: 50px 10px 10px 10px;
   text-align: center;
@@ -59,14 +72,13 @@ background-color: maroon;
   width: 18%;
   margin-left: 41%;
   margin-right: 41%;
-  /* background-image: url("https://media.gettyimages.com/xc/175534263-basketball-texture.jpg?v=1&c=IWSAsset&k=2&d=BF73B9D673DE700BCC719A313759AD321B86E9F100254758E6EDC5F7FDDCC5D6&b=RQ==");
-  background-position: center; */
+  background-image: image("basketball.jpeg");
 }
 
 #choices {
   text-align: center;
   color: White;
-  font-family: 'Gaegu', cursive;
+  font-family: 'Merriweather Sans', sans-serif;
   display: flex;
   padding-left: 500px;
   flex-direction: row;
